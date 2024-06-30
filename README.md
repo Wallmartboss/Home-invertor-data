@@ -1,3 +1,1 @@
-GoIT-JS-HW-11
-
-Eleventh homework of JavaScript
+Page for illustrate status and data from solar invertor
