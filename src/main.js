@@ -1,6 +1,7 @@
 const date_page = document.querySelector('.date_page');
 
-const url = "http://192.168.1.117:9000/"; 
+// const url = "http://192.168.1.117:9000/"; 
+const url = "http://georoute.asuscomm.com:5555/"; 
 const status_EP = "get_status";
 const mode_EP = "get_mode";
 const warnings_EP = "get_warnings"; 
