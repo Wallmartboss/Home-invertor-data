@@ -1,7 +1,7 @@
 const date_page = document.querySelector('.date_page');
 
-// const url = "http://192.168.1.117:9000/"; 
-const url = "http://georoute.asuscomm.com:5555/"; 
+const url = "http://192.168.1.117:9000/"; 
+// const url = "http://georoute.asuscomm.com:5555/"; 
 const status_EP = "get_status";
 const mode_EP = "get_mode";
 const warnings_EP = "get_warnings"; 
@@ -53,7 +53,7 @@ const setUserTimerId = setInterval(() => {
   
 
 function markup_mode (data) {
-  if (data['mode']==="Line Mode") {
+  if (data["mode"]==="Line Mode") {
   return (`<div class="mode_EP">
      <p class="param_title net main">Живлення від мережі </p> </div>`)}
   else { return (`<div class="mode_EP"><p class="param_title bat main">Живлення від батарей</p></div>`)};
