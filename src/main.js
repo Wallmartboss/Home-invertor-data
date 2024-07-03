@@ -16,7 +16,7 @@ mode();
 statusEP();
 // console.log(view_mode);
 // console.log(view_status);
-date_page.innerHTML = view_mode + view_status;
+// date_page.innerHTML = view_mode + view_status;
 
 const setUserTimerId = setInterval(() => {
   mode();
