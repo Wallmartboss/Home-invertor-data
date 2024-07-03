@@ -9,15 +9,22 @@ const warnings_EP = "get_warnings";
 const modeUrl = `${url}${mode_EP}`;
 const statusUrl = `${url}${status_EP}`;
 const warningsUrl = `${url}${warnings_EP}`;
-
+let view_mode ="";
+let view_status="";
 
 mode();
-statusEP()
+statusEP();
+// console.log(view_mode);
+// console.log(view_status);
+date_page.innerHTML = view_mode + view_status;
 
 const setUserTimerId = setInterval(() => {
   mode();
-  statusEP()
-}, 15000);
+  statusEP();
+//   console.log(view_mode);
+// console.log(view_status);
+  // date_page.innerHTML = view_mode + view_status
+}, 10000);
 
   function mode() {
     fetch(modeUrl)
@@ -28,7 +35,8 @@ const setUserTimerId = setInterval(() => {
         return response.json();
       })
       .then(data => {
-        date_page.innerHTML = markup_mode(data);
+        view_mode = markup_mode(data);
+        // date_page.innerHTML = markup_mode(data);
       })
       .catch(error => {
         console.error('Fetch error:', error);
@@ -44,7 +52,9 @@ const setUserTimerId = setInterval(() => {
         return response.json();
       })
       .then(data => {
-        date_page.insertAdjacentHTML("beforeend", markup_status(data))
+          view_status = markup_status(data);
+        // date_page.insertAdjacentHTML("beforeend", markup_status(data))
+        date_page.innerHTML = markup_mode(data) + markup_status(data);
       })
       .catch(error => {
         console.error('Fetch error:', error);
